@@ -36,9 +36,10 @@ package translit
 
 import (
 	"bytes"
-	"golang.org/x/exp/utf8string"
 	"strings"
 	"unicode"
+
+	"golang.org/x/exp/utf8string"
 )
 
 // RuTransiltMap описывает замены русских букв на английские при транслитерации. Некоторые буквы
@@ -78,6 +79,11 @@ var RuTransiltMap = map[rune]string{
 	'э': "e",
 	'ю': "ju",
 	'я': "ja",
+	'+': "",
+	')': "",
+	'(': "",
+	'/': "_",
+	'.': "_",
 }
 
 // Transliterate выполняет транслитерацию в строке по указанной таблице и возвращает новую строку с
